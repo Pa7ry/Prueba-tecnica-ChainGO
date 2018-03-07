@@ -12,6 +12,20 @@ let example2 = [
   [7,2], // 9
   [7,2,10] //19
 ]
+
+let example3 = [
+  [4, 3], //9
+  [2, 0], // 2
+  [8, 2], //16
+  [5, 1], // 6
+  [4, 1], // 12
+  [10, nil], // 6
+  [10, nil], //21
+  [10, nil], //19
+  [3, 2], // 9
+  [8,1,9] //19
+]
+
 let results = []
 
 
@@ -66,4 +80,12 @@ let scoreGame = (game) => {
       // console.log(`--------------------------------------------------------`);
     }
   };
-}
+  let total = results.toString();
+  console.log(`The frames score are: ${total}.`)
+
+  let scoreGlobal = 0;
+  results.forEach((framePoints)=>{
+      scoreGlobal += framePoints;
+  })
+  console.log(`The score Global is: ${scoreGlobal}`);
+  }
